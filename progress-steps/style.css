@@ -1,0 +1,74 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: #f6f7fb;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.container {
+    display: flex;
+    margin-bottom: 50px;
+    position: relative;
+    overflow: hidden;
+}
+.container::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background-color: rgb(238, 238, 238);
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: -1;
+}
+.circle {
+    margin-right: 100px;
+    position: relative;
+    border-radius: 50%;
+    padding: 7px 12px;
+    background-color: #fff;
+    border: 4px solid rgb(238, 238, 238);
+}
+.circle:last-child {
+    margin-right: 0;
+}
+button {
+    padding: 7px 15px;
+    margin-right: 20px;
+    border: none;
+    color: rgb(92, 92, 92);
+    outline: none;
+}
+.circle.active {
+    border-color: #3498db;
+}
+.circle.active::after {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 4px;
+    top: 50%;
+    right: 114%;
+    transform: translateY(-50%);
+    background-color: #3498db;
+}
+.circle.active:first-of-type::before {
+    display: none;
+}
+.progress {
+    background-color: #3498db;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    height: 4px;
+    width: 0%;
+    z-index: -1;
+    transition: 0.4s ease;
+}
