@@ -99,4 +99,5 @@ img {
 .active {
     transform: rotate(-15deg);
     transform-origin: top left;
+    transition: all 250ms;
 }
