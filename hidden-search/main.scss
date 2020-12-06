@@ -1,0 +1,32 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+* {
+    box-sizing: border-box;
+}
+.box {
+    position: relative;
+
+        .search {
+            width: 35px;
+            height: 35px;
+            padding: 0.5em;
+            border: 2px solid black;
+            transition: all 250ms;
+            position: relative;
+        }
+        button {
+            width: 35px;
+            height: 35px;
+            padding: 0.5em;
+            position: absolute;
+            top: 0;
+            right: 0;
+            background-color: #fff;
+            cursor: pointer;
+        }
+}
